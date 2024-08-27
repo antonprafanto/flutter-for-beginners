@@ -22,11 +22,28 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       appBar: AppBar(
         title: const Text('Stateful Widget'),
       ),
-      body: Column(
-        children: [
-          Text(_text),
-          ElevatedButton(onPressed: _changeText, child: Text('Ubah text'))
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(_text),
+            ElevatedButton(
+              onPressed: _changeText,
+              child: const Text(
+                'Ubah text',
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent,
+                    letterSpacing: 2,
+                    wordSpacing: 5,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.red,
+                    decorationStyle: TextDecorationStyle.dashed),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
