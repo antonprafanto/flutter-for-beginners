@@ -4,6 +4,7 @@ import 'package:pertemuan3/layouts/grid_versi_1.dart';
 import 'package:pertemuan3/layouts/grid_versi_2.dart';
 import 'package:pertemuan3/layouts/listview_versi_1.dart';
 import 'package:pertemuan3/layouts/listview_versi_2.dart';
+import 'package:pertemuan3/layouts/sizebox.dart';
 //import 'package:pertemuan3/layouts/columns_rows.dart';
 import 'package:pertemuan3/layouts/stack.dart';
 //import 'package:pertemuan3/layouts/sample_container.dart';
@@ -60,7 +61,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 void main() {
   runApp(
     const MaterialApp(
-      home: SampleCard(),
+      home: SampleSizedBox(),
     ),
   );
 }
