@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pertemuan3/layouts/card.dart';
+import 'package:pertemuan3/layouts/flexible_Expanded.dart';
 import 'package:pertemuan3/layouts/grid_versi_1.dart';
 import 'package:pertemuan3/layouts/grid_versi_2.dart';
 import 'package:pertemuan3/layouts/listview_versi_1.dart';
@@ -61,7 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 void main() {
   runApp(
     const MaterialApp(
-      home: SampleSizedBox(),
+      home: SampleFlexible(),
     ),
   );
 }
