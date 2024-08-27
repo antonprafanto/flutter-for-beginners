@@ -1,35 +1,32 @@
 import 'package:flutter/material.dart';
 
-class MyColumnsRows extends StatelessWidget {
-  const MyColumnsRows({super.key});
+class SampleColumnRow extends StatelessWidget {
+  const SampleColumnRow({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Belajar Column & Row'),
-      ),
+      appBar: AppBar(title: const Text('Belajar Column & Row')),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
+            height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   width: 50,
-                  color: Colors.cyan,
-                  child: const Icon(
-                    Icons.star,
-                    color: Colors.white,
-                  ),
+                  color: Colors.blue,
+                  child: const Icon(Icons.star, color: Colors.white),
+                ),
+                const SizedBox(
+                  width: 16,
                 ),
                 Container(
                   width: 50,
                   color: Colors.red,
-                  child: const Icon(
-                    Icons.star,
-                    color: Colors.white,
-                  ),
+                  child: const Icon(Icons.favorite, color: Colors.white),
                 ),
               ],
             ),
@@ -38,7 +35,7 @@ class MyColumnsRows extends StatelessWidget {
             child: Container(
               height: 50,
               color: Colors.green,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Green Container',
                   style: TextStyle(color: Colors.white),
@@ -50,7 +47,7 @@ class MyColumnsRows extends StatelessWidget {
             child: Container(
               height: 50,
               color: Colors.red,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Red Container',
                   style: TextStyle(color: Colors.white),
@@ -62,10 +59,22 @@ class MyColumnsRows extends StatelessWidget {
             child: Container(
               height: 50,
               color: Colors.yellow,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Yellow Container',
                   style: TextStyle(color: Colors.black),
+                ),
+              ),
+            ),
+          ),
+          Flexible(
+            child: Container(
+              height: 50,
+              color: Colors.grey,
+              child: const Center(
+                child: Text(
+                  'Grey Container',
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
             ),

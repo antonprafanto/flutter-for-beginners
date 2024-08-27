@@ -54,7 +54,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 void main() {
   runApp(
     const MaterialApp(
-      home: MyColumnsRows(),
+      home: SampleColumnRow(),
     ),
   );
 }
