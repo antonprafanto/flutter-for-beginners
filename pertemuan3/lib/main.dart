@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan3/layouts/sample_container.dart';
+import 'package:pertemuan3/layouts/columns_rows.dart';
+//import 'package:pertemuan3/layouts/sample_container.dart';
 
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({super.key});
@@ -53,7 +54,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 void main() {
   runApp(
     const MaterialApp(
-      home: MyContainer(),
+      home: MyColumnsRows(),
     ),
   );
 }
