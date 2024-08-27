@@ -25,6 +25,28 @@ class MyContainer extends StatelessWidget {
             color: Colors.blueGrey,
           ),
         ),
+        child: const Column(
+          children: [
+            Icon(
+              Icons.star,
+              color: Colors.yellow,
+              size: 50,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'ini container',
+              textAlign: TextAlign.center,
+              // overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: Color.fromARGB(255, 45, 34, 190),
+                fontSize: 36,
+                fontWeight: FontWeight.w500,
+                wordSpacing: 10,
+                letterSpacing: 5,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
