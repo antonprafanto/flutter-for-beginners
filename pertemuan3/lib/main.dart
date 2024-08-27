@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pertemuan3/layouts/sample_container.dart';
 
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({super.key});
@@ -51,8 +52,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
 void main() {
   runApp(
-    MaterialApp(
-      home: MyStatefulWidget(),
+    const MaterialApp(
+      home: MyContainer(),
     ),
   );
 }
