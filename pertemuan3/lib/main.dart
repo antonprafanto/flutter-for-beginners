@@ -1,65 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:pertemuan3/layouts/grid_versi_1.dart';
-import 'package:pertemuan3/layouts/grid_versi_2.dart';
-import 'package:pertemuan3/layouts/listview_versi_1.dart';
-import 'package:pertemuan3/layouts/listview_versi_2.dart';
-//import 'package:pertemuan3/layouts/columns_rows.dart';
-import 'package:pertemuan3/layouts/stack.dart';
-//import 'package:pertemuan3/layouts/sample_container.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({super.key});
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  String _text = 'Ini Adalah StatefulWidget';
-
-  void _changeText() {
-    setState(() {
-      _text = 'Text Telah Berubah';
-    });
-  }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Stateful Widget'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(_text),
-            ElevatedButton(
-              onPressed: _changeText,
-              child: const Text(
-                'Ubah text',
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent,
-                    letterSpacing: 2,
-                    wordSpacing: 5,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.red,
-                    decorationStyle: TextDecorationStyle.dashed),
-              ),
-            )
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Contoh ListTile'),
+        ),
+        body: ListView(
+          children: const <Widget>[
+            ListTile(
+              leading: Icon(Icons.map),
+              title: Text('Peta'),
+              subtitle: Text('Peta Dunia'),
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              leading: Icon(Icons.photo_album),
+              title: Text('Album'),
+              subtitle: Text('Foto Favorit'),
+              trailing: Icon(Icons.chevron_right),
+            ),
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text('Telepon'),
+              subtitle: Text('Hubungi Sekarang'),
+              trailing: Icon(Icons.chevron_right),
+            ),
           ],
         ),
       ),
     );
   }
-}
-
-void main() {
-  runApp(
-    const MaterialApp(
-      home: SampleListViewBuilder(),
-    ),
-  );
 }
