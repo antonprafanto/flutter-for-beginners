@@ -15,7 +15,7 @@ class MyContainer extends StatelessWidget {
           gradient: const LinearGradient(
             colors: [Colors.black12, Colors.blueAccent],
             begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            end: Alignment.bottomRight ,
           ),
           border: Border.all(
             width: 3,

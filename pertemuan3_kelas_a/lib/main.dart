@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pertemuan3_kelas_a/widgets/column_row.dart';
 import 'package:pertemuan3_kelas_a/widgets/container.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: MyContainer(),
+        body: MyColumnRow(),
       ),
     );
   }
