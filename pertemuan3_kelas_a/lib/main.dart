@@ -14,28 +14,36 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Ini RichText'),
         ),
-        body: Center(
-          child: RichText(
-            text: const TextSpan(
-              children: [
-                TextSpan(
-                  text: 'Hallo',
-                  style: TextStyle(fontSize: 30, color: Colors.black),
+        body: RichText(
+          text: const TextSpan(
+            children: [
+              TextSpan(
+                text: 'Hallo',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 20,
+                      color: Colors.black45,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
                 ),
-                TextSpan(
-                  text: ' Flutter',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                  ),
+              ),
+              TextSpan(
+                text: ' Flutter',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
                 ),
-                TextSpan(
-                  text: ' !',
-                  style: TextStyle(fontSize: 30, color: Colors.red),
-                ),
-              ],
-            ),
+              ),
+              TextSpan(
+                text: ' !',
+                style: TextStyle(fontSize: 30, color: Colors.red),
+              ),
+            ],
           ),
         ),
       ),
