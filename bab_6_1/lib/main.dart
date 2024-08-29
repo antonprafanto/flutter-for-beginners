@@ -1,5 +1,3 @@
-import 'package:bab_6_1/pages/page_one.dart';
-import 'package:bab_6_1/pages/page_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +10,51 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //home: const PageOne(),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const PageOne(),
-        '/second': (context) => const PageTwo(text: 'text'),
-      },
+      title: 'Navigator Demo',
+      home: const FirstPage(),
+    );
+  }
+}
+
+class FirstPage extends StatelessWidget {
+  const FirstPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Halaman Pertama')),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigasi ke halaman kedua dengan menggunakan Navigator.push()
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SecondPage()),
+            );
+          },
+          child: const Text('Pergi ke Halaman Kedua'),
+        ),
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Halaman Kedua')),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Kembali ke halaman pertama dengan menggunakan Navigator.pop()
+            Navigator.pop(context);
+          },
+          child: const Text('Kembali ke Halaman Pertama'),
+        ),
+      ),
     );
   }
 }
