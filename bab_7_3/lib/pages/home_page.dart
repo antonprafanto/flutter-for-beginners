@@ -17,17 +17,17 @@ class _HomePageState extends State<HomePage> {
         description: 'kesuperindo habis 1juta',
         time: DateTime.now()),
     Note(
-        id: 1,
+        id: 2,
         title: 'Futsal',
         description: 'kesuperindo habis 1juta',
         time: DateTime.now()),
     Note(
-        id: 1,
+        id: 3,
         title: 'Work',
         description: 'kesuperindo habis 1juta',
         time: DateTime.now()),
     Note(
-        id: 1,
+        id: 4,
         title: 'Lari',
         description: 'kesuperindo habis 1juta',
         time: DateTime.now()),

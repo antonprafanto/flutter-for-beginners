@@ -14,14 +14,7 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Belajar Flutter'),
         ),
-        body: Center(
-          child: Container(
-            color: Colors.amber,
-            width: 200,
-            height: 200,
-            margin: EdgeInsets.all(20),
-          ),
-        ),
+        body: NavigationBar(destinations: destinations)
       ),
     );
   }
